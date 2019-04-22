@@ -1,0 +1,49 @@
+﻿@page
+@model pro.Pages.Maestro.AgregarMaestroModel
+@{
+    ViewData["Title"] = "AgregarMaestro";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+@section Scripts{
+    <script src="~/js/AgregarMaestro.js" type="text/javascript"></script>
+}
+
+<h2>Agregar Maestro</h2>
+
+<div class="col-md-12">
+    <form id="formMaestro" method="post">
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-1">
+                    <label for="inputTitulo">Titulo</label>
+                </div>
+                <div class="col-md-11">
+                    <input type="text" id="txtTitulo" class="form-control" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-1">
+                    <label for="inputNombre">Nombre</label>
+                </div>
+                <div class="col-md-11">
+                    <input type="text" id="txtNombre" class="form-control" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-1">
+                    <label for="inputNombre">Apellido</label>
+                </div>
+                <div class="col-md-11">
+                    <input type="text" id="txtApellido" class="form-control" />
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="col-md-12 text-right">
+        <button id="btnmodificar" class="btn btn-info" onclick="agregarMaestro()">Agregar</button>
+    </div>
+</div>

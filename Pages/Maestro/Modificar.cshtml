@@ -1,0 +1,41 @@
+﻿@page "{id:long}"
+@model pro.Pages.Maestro.ModificarModel
+@{
+    ViewData["Title"] = "Modificar";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+@section Scripts{
+    <script src="~/js/ModificarMaestro.js" type="text/javascript"></script>
+}
+<input type="hidden" id="hdnid" value="@Model.maestro.MaestroId"/>
+
+<h2>Modificar @Model.maestro.Nombre</h2>
+
+<div class="col-md-12">
+    <form id="formMaestro" method="put">
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-1">
+                    <label for="inputTitulo">Titulo</label>
+                </div>
+                <div class="col-md-11">
+                    <input type="text" id="txtTitulo" class="form-control" value="@Model.maestro.Titulo" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-1">
+                    <label for="inputNombre">Nombre</label>
+                </div>
+                <div class="col-md-11">
+                    <input type="text" id="txtNombre" class="form-control" value="@Model.maestro.Nombre" />
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="col-md-12 text-right">
+        <button id="btnmodificar" class="btn btn-info" onclick="modificarMaestro()">Modificar</button>
+    </div>
+</div>

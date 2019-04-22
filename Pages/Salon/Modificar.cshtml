@@ -1,0 +1,30 @@
+﻿@page "{id:long}"
+@model pro.Pages.Salon.ModificarModel
+@{
+    ViewData["Title"] = "Modificar";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+@section Scripts{
+    <script src="~/js/ModificarSalon.js" type="text/javascript"></script>
+}
+<input type="hidden" id="hdnid" value="@Model.salon.SalonId" />
+<h2>Modificar el salon @Model.salon.Nombre</h2>
+
+<div class="col-md-12">
+    <form id="formMaestro" method="put">
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-1">
+                    <label for="inputTitulo">Salon</label>
+                </div>
+                <div class="col-md-11">
+                    <input type="text" id="txtsalon" class="form-control" value="@Model.salon.Nombre" />
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="col-md-12 text-right">
+        <button id="btnmodificar" class="btn btn-info" onclick="modificarSalon()">Modificar</button>
+    </div>
+</div>
+
